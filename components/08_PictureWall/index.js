@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Text, View,Image, StyleSheet,Dimensions } from 'react-native'
 import frontEnd from '../../assets/json/front_end.json'
 
-export default class index extends Component {
+export default class Picture extends Component {
 
 	state = {
 		imgs:frontEnd, //前端学科数组

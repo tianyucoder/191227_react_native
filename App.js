@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import {StatusBar,SafeAreaView} from 'react-native'
-import Demo from './components/08_PictureWall'
+import {Text,StatusBar,SafeAreaView} from 'react-native'
+import Demo from './components/10_Button'
+import Button from './components/10_Button_TouchableOpacity/SimpleButton'
 /* 
 规矩：
 		1.样式可以直接写style={{}}，或借助特定的API创建样式，不能用传统的css或less文件来写。
@@ -23,6 +24,11 @@ export default class App extends Component {
 				/>
 				<SafeAreaView style={{flex:1}}>
 					<Demo/>
+					<Button textColor="red" bgColor="skyblue" width={100} heigth={40} deg={5} textSize={18}/>
+					<Text>{'\n'}</Text>
+					<Button textColor="pink" bgColor="gray" width={100} heigth={40} deg={5} textSize={18}/>
+					<Text>{'\n'}</Text>
+					<Button textColor="gray" bgColor="red" width={100} heigth={40} deg={5} textSize={18}/>
 				</SafeAreaView>
 				
 			</>
