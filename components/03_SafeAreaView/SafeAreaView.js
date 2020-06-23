@@ -27,7 +27,6 @@ export default class App extends Component {
 						<Text style={textStyle}>hello,ReactNative!</Text>
 					</View>
 				</SafeAreaView>
-				
 			</>
 		)
 	}

@@ -17,9 +17,10 @@ export default class App extends Component {
 				{/* 状态栏 */}
 				<StatusBar 
 					barStyle="light-content" //控制状态栏文字颜色 light-content 或 dark-content
-					backgroundColor="gray" //控制状态栏颜色
+					backgroundColor="gray" //控制状态栏背景颜色
 					// hidden //隐藏状态栏
 					animated //过度动画
+					//translucent//沉浸式状态栏
 				/>
 				<View style={container}>
 					<Text style={textStyle}>hello,ReactNative!</Text>
