@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {StatusBar,SafeAreaView} from 'react-native'
-import Demo from './components/05_Text/MyText'
+import {Text,View,StyleSheet,StatusBar,SafeAreaView} from 'react-native'
+
 /* 
 规矩：
 		1.样式可以直接写style={{}}，或借助特定的API创建样式，不能用传统的css或less文件来写。
@@ -11,18 +11,21 @@ import Demo from './components/05_Text/MyText'
 
 export default class App extends Component {
 	render() {
+		const {container,textStyle} = styles
 		return (
 			<>
 				{/* 状态栏 */}
 				<StatusBar 
 					barStyle="light-content" //控制状态栏文字颜色 light-content 或 dark-content
-					backgroundColor="gray" //控制状态栏颜色
+					backgroundColor="rgba(1,1,1,0)" //控制状态栏颜色
 					//  hidden //隐藏状态栏
 					animated //过度动画
 					//translucent//沉浸式状态栏
 				/>
 				<SafeAreaView style={{flex:1}}>
-					<Demo/>
+					<View style={container}>
+						<Text style={textStyle}>hello,ReactNative!</Text>
+					</View>
 				</SafeAreaView>
 				
 			</>
@@ -30,3 +33,16 @@ export default class App extends Component {
 	}
 }
 
+//样式
+const styles = StyleSheet.create({
+	container:{
+		backgroundColor:'skyblue',
+		flex:1,
+		// justifyContent:'center'
+	},
+	textStyle:{
+		fontSize:30,
+		textAlign:'center',
+		fontWeight:'bold'
+	}
+})
