@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {StatusBar,SafeAreaView} from 'react-native'
-import Demo from './components/07_Image_ImageBackground'
+import Demo from './components/08_PictureWall'
 /* 
 规矩：
 		1.样式可以直接写style={{}}，或借助特定的API创建样式，不能用传统的css或less文件来写。
