@@ -5,7 +5,7 @@ export default class index extends Component {
 	render() {
 		return (
 			<View>
-				<Image source={{uri:'1'}}/>
+				<Image style={{width:100,height:100}} source={{uri:'demo'}}/>
 			</View>
 		)
 	}
