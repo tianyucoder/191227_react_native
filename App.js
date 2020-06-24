@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Text,StatusBar,SafeAreaView} from 'react-native'
-import Demo from './components/12_ScrollView'
+import Demo from './components/14_swiper'
 // import Button from './components/10_Button_TouchableOpacity/SimpleButton'
 /* 
 规矩：
