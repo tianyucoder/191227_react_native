@@ -14,7 +14,7 @@ export default class MyScrollView extends Component {
 				pagingEnabled={true} //滚动屏幕宽度（或高度）的整数倍
 				showsVerticalScrollIndicator={false} //是否展示垂直滚动条
 				showsHorizontalScrollIndicator={false} //是否展示水平滚动条
-				// scrollEnabled={false} //是否可以滚动说
+				// scrollEnabled={false} //是否可以滚动
 			>
 				{
 					this.state.colors.map((color,index)=>{
