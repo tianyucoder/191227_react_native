@@ -4,7 +4,7 @@ import { Text, View,TouchableOpacity,StyleSheet } from 'react-native'
 export default class MyButton extends Component {
 
 	render() {
-		const {textColor,bgColor, width, heigth, deg,textSize} = this.props
+		const {textColor,bgColor, width, heigth, deg,textSize,onPress} = this.props
 		const styles = StyleSheet.create({
 			btn:{
 				width:width || 100,
@@ -21,7 +21,7 @@ export default class MyButton extends Component {
 		})
 		const {btn,text} = styles
 		return (
-			<TouchableOpacity style={btn}>
+			<TouchableOpacity style={btn} onPress={onPress}>
 				<Text style={text}>点我</Text>
 			</TouchableOpacity>
 		)
