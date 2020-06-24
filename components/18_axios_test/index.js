@@ -1,11 +1,21 @@
 import React, { Component } from 'react'
 import { Text, View,Image,SectionList } from 'react-native'
-import carList from '../../assets/json/car.json'
+import axios from 'axios'
 
+//json-server
 export default class index extends Component {
 
 	state = {
-		cars:carList.total
+		cars:[]
+	}
+
+	componentDidMount(){
+		axios.get('http://atguigu.utools.club/total').then(
+			response => {
+				this.setState({cars:response.data})
+			},
+			error => {console.log('请求失败',error);}
+		)
 	}
 
 	renderItem = ({item})=>{

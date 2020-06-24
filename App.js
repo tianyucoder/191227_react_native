@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Text,StatusBar,SafeAreaView} from 'react-native'
-import Demo from './components/17_CarList'
+import Demo from './components/18_axios_test'
 // import Button from './components/10_Button_TouchableOpacity/SimpleButton'
 /* 
 规矩：
@@ -17,7 +17,7 @@ export default class App extends Component {
 				{/* 状态栏 */}
 				<StatusBar 
 					barStyle="light-content" //控制状态栏文字颜色 light-content 或 dark-content
-					backgroundColor="gray" //控制状态栏颜色
+					backgroundColor="skyblue" //控制状态栏颜色
 					//  hidden //隐藏状态栏
 					animated //过度动画
 					//translucent//沉浸式状态栏
