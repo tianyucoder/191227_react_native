@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Text,StatusBar,SafeAreaView} from 'react-native'
-// import Demo from './components/18_axios_test'
+import AppContainer from './pages/AppContainer'
 /* 
 规矩：
 		1.样式可以直接写style={{}}，或借助特定的API创建样式，不能用传统的css或less文件来写。
@@ -22,9 +22,8 @@ export default class App extends Component {
 					//translucent//沉浸式状态栏
 				/>
 				<SafeAreaView style={{flex:1}}>
-
+					<AppContainer/>
 				</SafeAreaView>
-				
 			</>
 		)
 	}
