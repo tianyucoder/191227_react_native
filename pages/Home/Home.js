@@ -7,7 +7,8 @@ export default class Home extends Component {
 	}
 
 	gotoHot = ()=>{
-		this.props.navigation.push('Hot',{name:'老刘',age:18})
+		this.props.navigation.navigate('Hot',{name:'老刘',age:18})
+		//此时不能用push和replace，因为push和replace是栈式导航所特有的
 	}
 
 	render() {
