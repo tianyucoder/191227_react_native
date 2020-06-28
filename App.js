@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {Text,StatusBar,SafeAreaView} from 'react-native'
-import Demo from './components/18_axios_test'
-// import Button from './components/10_Button_TouchableOpacity/SimpleButton'
+// import Demo from './components/18_axios_test'
 /* 
 规矩：
 		1.样式可以直接写style={{}}，或借助特定的API创建样式，不能用传统的css或less文件来写。
@@ -17,14 +16,13 @@ export default class App extends Component {
 				{/* 状态栏 */}
 				<StatusBar 
 					barStyle="light-content" //控制状态栏文字颜色 light-content 或 dark-content
-					backgroundColor="skyblue" //控制状态栏颜色
+					backgroundColor="gray" //控制状态栏颜色
 					//  hidden //隐藏状态栏
 					animated //过度动画
 					//translucent//沉浸式状态栏
 				/>
 				<SafeAreaView style={{flex:1}}>
-					<Demo/>
-					{/* <Button textColor="red" bgColor="skyblue" width={100} heigth={40} deg={5} textSize={18}/> */}
+
 				</SafeAreaView>
 				
 			</>
