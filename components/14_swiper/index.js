@@ -91,7 +91,7 @@ export default class extends Component {
 
 const styles = {
   container: {
-		height:300
+		height:260
   },
 
   wrapper: {},

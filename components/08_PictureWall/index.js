@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
-import { Text, View,Image, StyleSheet,Dimensions } from 'react-native'
-import frontEnd from '../../assets/json/front_end.json'
+import { Text, View,Image, StyleSheet,Dimensions,TouchableOpacity } from 'react-native'
 
 export default class Picture extends Component {
 
 	state = {
-		imgs:frontEnd, //前端学科数组
+		imgs:[], //前端学科数组
 		itemWidth:120, //每一个图片的宽度
 		itemHeight:80 //每一个图片的高度
+	}
+
+	componentDidMount(){
+		const {data} = this.props
+		this.setState({imgs:data})
 	}
 
 	renderItem = ()=>{
@@ -30,7 +34,12 @@ export default class Picture extends Component {
 			imgs.push({name:'',url:'#'})
 		}
 		return imgs.map((img,index)=>{
-			return <Image key={index} source={{uri:img.url}} style={itemStyle}/>
+			return (
+				<TouchableOpacity key={index} style={{alignItems:'center',marginBottom:10}}>
+					<Image source={{uri:img.url}} style={itemStyle}/>
+					<Text style={{fontSize:18}}>{img.name}</Text>
+				</TouchableOpacity>
+			)
 		})
 	}
 
@@ -47,7 +56,7 @@ export default class Picture extends Component {
 		itemStyle:{
 			width:this.state.itemWidth,
 			height:this.state.itemHeight,
-			marginBottom:10
+			// marginBottom:10
 		},
 		container:{
 			flexDirection:'row',
@@ -55,7 +64,7 @@ export default class Picture extends Component {
 			flex:1,
 			paddingTop:10,
 			justifyContent:"space-around",
-			backgroundColor:'skyblue'
+			// backgroundColor:'skyblue'
 		}
 	})
 }
